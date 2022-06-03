@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block contenido %}
+  <h3>Enter Smart Meter</h3>
+  <form action="formularioMeter" method="POST">
+    {% csrf_token %}
+    <p>Trademark:</p>
+    <input type="text" name="marca">
+    <p>Model:</p>
+    <input type="text" name="modelo">
+    <p>Type:</p>
+    <input type="text" name="tipo">
+    <p>Price:</p>
+    <input type="float" name="precio">
+    
+    <input type="submit" value ="Send">
+
+  </form>
+
+{% endblock %}

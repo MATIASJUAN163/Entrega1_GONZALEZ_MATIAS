@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block contenido %}
+ {% if modems %}
+    <main>
+
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Modelo</th>
+                <th scope="col">Tipo</th>
+                <th scope = "col">Precio [USD]</th>
+              </tr>
+            </thead>
+            <tbody>
+                {% for n in modems %}
+    
+                <tr>
+                    <th scope="row">{{n.id}}</th>
+                    <td>{{n.marca}}</td>
+                    <td>{{n.modelo}}</td>
+                    <td>{{n.comunicacion}}</td>
+                    <td>{{n.precio}}</td>
+                </tr>
+    
+                {% endfor %}
+             
+            </tbody>
+          </table>
+    
+    </main>
+
+    {% else %}
+        <p>No se encontraron modem </p>
+    {% endif %}
+{% endblock %}

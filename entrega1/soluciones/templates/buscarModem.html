@@ -1,0 +1,14 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block contenido %}
+    <h3>Searh modem</h3>
+    <form action="buscar" method="GET">
+        
+        <p>Trademark</p>
+        <input type="text" name="marca" id="marca">
+        <input type="submit" value="Search">
+
+    </form>
+{% endblock %}

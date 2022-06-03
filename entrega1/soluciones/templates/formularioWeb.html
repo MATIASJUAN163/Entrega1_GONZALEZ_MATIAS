@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% load static %}
+
+{% block contenido %}
+  <h3>Enter Web Client</h3>
+
+  <form action="formularioWeb" method="POST">
+    {% csrf_token %}
+    <p>Trademark:</p>
+    <input type="text" name="marca">
+    <p>Model:</p>
+    <input type="text" name="modelo">
+    <p>Price:</p>
+    <input type="float" name="precio">
+
+    <input type="submit" value="Send">
+    
+  
+  </form>
+{% endblock %}
