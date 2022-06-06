@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.template import loader
 from soluciones.models import Modem , Smartmeter , Webclient
 from soluciones.forms import ModemFormulario , MeterFormulario , WebFormulario 
 
@@ -17,28 +18,12 @@ def listaModem( request ) :
 
     return render( request , "listaModem.html" , datosModem )
 
-def altaModem( request ) : 
-
-    modem = Modem( marca = "ISKRA" , modelo = "AC150-A11.2" , comunicacion = "GPRS" , precio = 120.5 )
-    modem.save()
-
-    modem = Modem( marca = "ESG" , modelo = "MDA35" , comunicacion = "GPRS" , precio = 220.33 )
-    modem.save()
-
 def listaMeter( request ) :
 
     meters = Smartmeter.objects.all()
     datosMeter = { "datosMeter" : meters }
 
     return render( request , "listaMeter.html" , datosMeter )
-
-def altaMeter( request ) :
-
-    meter = Smartmeter( marca = "ISKRA" , modelo = "AM550" , tipo = "MONOFASICO" ,  precio = 98.9 )
-    meter.save()
-    
-    meter = Smartmeter( marca = "ELSTER" , modelo = "ALPHA 3" , tipo = "POLIFASICO" ,  precio = 356.9 )
-    meter.save()
 
 def listaWeb( request ) :
 
@@ -47,17 +32,6 @@ def listaWeb( request ) :
 
     return render( request , "listaWeb.html" , datosWeb )
 
-def altaWeb( request ) : 
-
-    web = Webclient( marca = "ISKRA" , modelo = "MeterViews" , precio = 68000 )
-    web.save()
-
-    web = Webclient( marca = "ESG" , modelo = "OPTIMUM" , precio = 78000 )
-    web.save()
-
-def contacto( request ) :
-
-    return render( request , "contacto.html" )
 
 def formularioModem( request ) :
 

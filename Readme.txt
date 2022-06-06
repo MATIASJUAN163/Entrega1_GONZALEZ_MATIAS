@@ -2,9 +2,10 @@
 
 >>>La web "Power Solutions MG" ofrece soluciones referidas a Smart grid.
    Presenta un navegador mediante botones para poder consultar la informacion
-   que los titula. Consta de 3 botones para consultar la base de datos y uno
-   utilizado para la busqueda de "modem de comunicación".
-   El boton "Start" nos lleva a la pagina de inicio.
+   que los titula. Consta de 3 botones para consultar la base de datos, 3 botones
+   para acceder a formularios de cada campo y uno utilizado para la busqueda exclusiva de 
+   de "modem de comunicación".
+   El boton "Inicio" nos lleva a la pagina de inicio.
    Se trabajó sobre una plantilla descargada desde stratboostrap.
 
 >>>Pantalla de inicio: <ipserver>/soluciones/

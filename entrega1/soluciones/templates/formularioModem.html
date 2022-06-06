@@ -3,20 +3,20 @@
 {% load static %}
 
 {% block contenido %}
-    <h3>Enter Modem</h3>
+    <h3>Modem, agregue un item a la BD</h3>
     <form action="formularioModem" method="POST">
         {% csrf_token %}
                        
-        <p>Trademark:</p>
+        <p>Marca:</p>
         <input type="text" name="marca">
-        <p>Model:</p>
+        <p>Modelo:</p>
         <input type="text" name="modelo">
-        <p>Comunication:</p>
+        <p>Comunicación:</p>
         <input type="text" name="comunicacion">
-        <p>Price:</p>
+        <p>Precio[USD]:</p>
         <input type="float" name="precio">
 
-        <input type="submit" value="Send">
+        <input type="submit" value="Enviar">
 
     </form>
 
